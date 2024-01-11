@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://bntbh2u3qphji"]
+
+[ext_resource type="Material" uid="uid://cfftv3ju8ebf7" path="res://Shaders/water.tres" id="1_ult8m"]
+[ext_resource type="PackedScene" uid="uid://dq4285byxx81r" path="res://Scenes/player.tscn" id="2_aytxn"]
+[ext_resource type="PackedScene" uid="uid://dfvyo4jeawnt1" path="res://Scenes/player_camera.tscn" id="3_eo6qj"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_wtsm5"]
+size = Vector2(50, 50)
+subdivide_width = 200
+subdivide_depth = 200
+orientation = 1
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_jd302"]
+
+[sub_resource type="Sky" id="Sky_lqqk6"]
+sky_material = SubResource("PhysicalSkyMaterial_jd302")
+
+[sub_resource type="Environment" id="Environment_q35lq"]
+background_mode = 2
+sky = SubResource("Sky_lqqk6")
+sdfgi_enabled = true
+
+[node name="level_01" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.322442, 0.530311, 0.0617594)
+mesh = SubResource("QuadMesh_wtsm5")
+surface_material_override/0 = ExtResource("1_ult8m")
+
+[node name="Player" parent="." instance=ExtResource("2_aytxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.624016, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.462461, -0.0053852, 0.886623, -0.718741, -0.587818, 0.371323, 0.519174, -0.808975, -0.275713, 10.6527, 4.04897, -0.396997)
+light_energy = 4.076
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_q35lq")
+
+[node name="Camera" parent="." instance=ExtResource("3_eo6qj")]

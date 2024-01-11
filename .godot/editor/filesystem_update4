@@ -1,0 +1,9 @@
+res://Shaders/water.gdshader
+res://Shaders/noise_texture_2d2.tres
+res://Shaders/water.tres
+res://Scenes/player.tscn
+res://Scenes/level_01.tscn
+res://Scenes/water.tscn
+res://Scenes/player_camera.tscn
+res://Scenes/ShipV1.tscn
+res://Scenes/deck_cannon.tscn

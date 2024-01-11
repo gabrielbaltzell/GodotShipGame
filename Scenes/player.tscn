@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq4285byxx81r"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_qy8mn"]
+[ext_resource type="ArrayMesh" uid="uid://nt5ft1dvxpps" path="res://Resources/shipV1/ship_game_ship_v1.obj" id="2_q55kv"]
+[ext_resource type="PackedScene" uid="uid://bkonwd2ngw7sy" path="res://Scenes/deck_cannon.tscn" id="3_tvrcj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvo6f"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00343835, 0)
+script = ExtResource("1_qy8mn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bvo6f")
+
+[node name="Boat" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, -0.930378, 0)
+mesh = ExtResource("2_q55kv")
+
+[node name="Node3D" parent="." instance=ExtResource("3_tvrcj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.645535, 0.445135, 0)
