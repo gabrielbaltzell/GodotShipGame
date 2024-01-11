@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bkonwd2ngw7sy"]
 
-[ext_resource type="ArrayMesh" uid="uid://ckliurvjpu1gr" path="res://Resources/shipV1/ship_game_ship_deck_cannon_v1.obj" id="1_4pu11"]
+[ext_resource type="ArrayMesh" uid="uid://bjtmniiole2ls" path="res://Resources/shipV1/ship_game_ship_deck_cannon_v1.obj" id="1_4pu11"]
 
 [node name="Node3D" type="Node3D"]
 

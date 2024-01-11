@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dq4285byxx81r"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_qy8mn"]
-[ext_resource type="ArrayMesh" uid="uid://nt5ft1dvxpps" path="res://Resources/shipV1/ship_game_ship_v1.obj" id="2_q55kv"]
+[ext_resource type="ArrayMesh" uid="uid://d2bgl5jj6cpu" path="res://Resources/shipV1/ship_game_ship_v1.obj" id="2_q55kv"]
 [ext_resource type="PackedScene" uid="uid://bkonwd2ngw7sy" path="res://Scenes/deck_cannon.tscn" id="3_tvrcj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bvo6f"]
