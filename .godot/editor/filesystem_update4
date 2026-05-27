@@ -1,8 +1,6 @@
+res://Scenes/cannonball.tscn
+res://Scenes/deck_cannon.tscn
 res://Scenes/level_01.tscn
-res://Shaders/water.gdshader
-res://Shaders/noise_texture_2d2.tres
-res://Shaders/water.tres
-res://Scenes/water.tscn
 res://Scenes/player.tscn
 res://Scenes/player_camera.tscn
-res://Scenes/deck_cannon.tscn
+res://Scenes/water.tscn

@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkonwd2ngw7sy"]
+[gd_scene load_steps=3 format=3 uid="uid://bkonwd2ngw7sy"]
 
 [ext_resource type="ArrayMesh" uid="uid://bjtmniiole2ls" path="res://Resources/shipV1/ship_game_ship_deck_cannon_v1.obj" id="1_4pu11"]
+[ext_resource type="Script" uid="uid://dvh0sbhuwn0u3" path="res://Scripts/deck_cannon.gd" id="1_vldt0"]
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_vldt0")
 
 [node name="ShipGameShipDeckCannonV1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, -0.037178, 0, 0.00900379)
 mesh = ExtResource("1_4pu11")
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.534324, 0.176104, 0.006126)

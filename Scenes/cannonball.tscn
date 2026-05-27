@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ceroti8rlh8m4"]
+
+[ext_resource type="Script" uid="uid://psbmfoypfdly" path="res://Scenes/cannonball.gd" id="1_q5hxe"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hgbox"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8cs5k"]
+emission_enabled = true
+emission = Color(0.980392, 0.858824, 0, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j0sra"]
+
+[node name="Cannonball" type="Area3D"]
+script = ExtResource("1_q5hxe")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("SphereMesh_hgbox")
+surface_material_override/0 = SubResource("StandardMaterial3D_8cs5k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("SphereShape3D_j0sra")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

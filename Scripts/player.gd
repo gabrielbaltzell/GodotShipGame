@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+signal fired()
 
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
@@ -32,7 +33,10 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-		
+	
+	if Input.is_action_just_pressed("fire"):
+		emit_signal("fired")
+	
 	# release/capture mouse on esc key press
 	if Input.is_action_just_pressed("esc"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

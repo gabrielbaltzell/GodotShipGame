@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dfvyo4jeawnt1" path="res://Scenes/player_camera.tscn" id="3_eo6qj"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_wtsm5"]
-size = Vector2(50, 50)
+size = Vector2(200, 200)
 subdivide_width = 200
 subdivide_depth = 200
 orientation = 1
